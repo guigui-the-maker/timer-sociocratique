@@ -351,7 +351,17 @@ deleteMode=false
 render()
 
 }
+function updateLayout(){
 
+let container=document.getElementById("participants")
+
+if(participants.length < 4){
+container.style.flex="0"
+}else{
+container.style.flex="1"
+}
+
+}
 function render(){
 
 let container=document.getElementById("participants")
@@ -390,6 +400,8 @@ ${p.running?"Pause":"Parler"}
 container.appendChild(card)
 
 })
+
+updateLayout()
 
 }
 
